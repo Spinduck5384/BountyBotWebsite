@@ -1,0 +1,152 @@
+/*Importing Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Quicksand:wght@300&family=Titillium+Web:wght@200&display=swap');
+
+
+/*Setting the Background*/
+body {
+    background-color: black;
+    color : white;
+}
+
+/*Side Navigation*/
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 90px;
+  }
+  
+  .sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(100,100,100);
+    display: block;
+    font-family: 'Titillium Web';
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+    transition: color 0.5s;
+  }
+
+  #main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.brand {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side {
+    display:flex;
+}
+
+/*Typewriter Animation*/
+.typewrite {
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Logo*/
+
+.image-wrapper img {
+    width: 100%;
+}
+
+.image-wrapper {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.imagewrapper {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.imagewrapper p {
+    margin: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #eeeeec;
+    background: rgba(0, 0, 0, 0.801);
+    transition: opacity 0.5s;
+    opacity: 0;
+    text-align: center;
+    font-family: 'Titillium Web';
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.imagewrapper p:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.imagewrapper p:hover {
+    opacity: 1;
+    transition: opacity 0.5s;
+    cursor: default;
+}
+
+/*What it does*/
+.what-it-does {
+    font-family: 'Titillium Web';
+    text-align: center;
+}
+
+#line-break {
+    color: black;
+    font-size: 10px;
+}
+
+/*Expand Image*/
+.expand-image img {
+    max-width: 100%;
+}
+.expand-image {
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+.expand-image {
+    transition: transform 0.5s;
+}
+.expand-image:hover {
+    transform: scale(1.07);
+}
+
+/*Captions*/
+.image1-caption {
+    position : relative;
+    top : 15px;
+}
