@@ -5,22 +5,31 @@
     <title>Bounty Bot</title>
     <!--Linking External JavaScript FIle-->
     <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Linking External CSS File-->
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
 </head>
 <body>
     <div id = "main">
         <!--Navigation Bar-->
-        
         <div class="nav-wrapper">
             <div class = "left-side">
+                <div class="nav-link-wrapper" id="navindex">
+                    <a href="#main">Home</a>
+                </div>
+                <div class="nav-link-wrapper" id="navprojects">
+                    <b><a href="#what-it-does">What it does</a></b>
+                </div>
+                <div class="nav-link-wrapper" id="navabout">
+                    <a href="#other-features">Features</a>
+                </div>
             </div>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="#main">HOME</a>
-            <a href="#what-it-does">WHAT IT DOES</a>
-        </div> 
         <div>
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
             <h1
                 id="typewriteani" class="typewrite" data-period="2000" data-type='[ "Welcome to the Bounty Bot website."]'>
                 <span class="wrap"></span>
@@ -29,7 +38,7 @@
         </div>
         <div class = "image-wrapper">
             <div class = "imagewrapper">
-                <img class = "expand-image" src = "ritr.jpeg" alt = "Logo drawn by PapaFrita#8423">
+                <img class = "expand-image" src = "Images/ritr.jpeg" alt = "Logo drawn by PapaFrita#8423">
                 <p>Logo drawn by PapaFrita#8423</p>
             </div>
         </div>
@@ -37,16 +46,71 @@
             <p id = "line-break">|</p>
             <p id = "line-break">|</p>
             <p id = "line-break">|</p>
-            <h1>What does it do?</h1>
+            <h1>What Does it Do?</h1>
             <p>Bounty Bot allows GameMasters (GMs) to keep track of unifinished and finished bounties and jobs.</p>
             <p>GMs use commands to display available or unavailable jobs through messages sent by the bot...</p>
-            
-            <img class = "expand-image" src = "displayavailable.png" alt = "Image shows an image of the command >displayavailable">
+            <p>The bot also allows GMs to add jobs to the list and displays them in the >displayavailable</p>
+            <img class = "expand-image" src = "Images/displayavailable.png" alt = "Image shows an image of the command >displayavailable">
             <figcaption class = "image1-caption">An example of the <b>>displayavailable command</b>, which displays <b>unfinished</b> jobs in a Discord Embed</figcaption>
             <p id = "line-break">|</p>
-            <img class = "expand-image" src = "displayfinished.png" alt = "Image shows an image of the command >displayavailable">
+            <img class = "expand-image" src = "Images/displayfinished.png" alt = "Image shows an image of the command >displayavailable">
             <figcaption class = "image1-caption">An example of the <b>>displayfinished</b> command, which displays <b>finished</b> jobs in a Discord Embed</figcaption>
+            <p id = "line-break">|</p>
+            <img class = "expand-image" src = "Images/addjob.png" alt = "Image shows an image of the command >displayavailable">
+            <figcaption class = "image1-caption">An example of the <b>>addjob</b> command, which adds jobs to the list of available jobs</figcaption>
+        </div>
+        <div id = "other-features" class = "other-features">
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <h1>Other Features</h1>
         </div>
     </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img_nature_wide.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img_snow_wide.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img_mountains_wide.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
 </body>
+<script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+    });
+</script>
 </html>
