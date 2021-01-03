@@ -98,12 +98,6 @@ body {
     margin: 0 auto;
     border-radius: 5%;
 }
-.expand-image {
-    transition: transform 0.5s;
-}
-.expand-image:hover {
-    transform: scale(1.03);
-}
 
 /*Other*/
 .image1-caption {
