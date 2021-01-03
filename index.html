@@ -8,8 +8,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Linking External CSS File-->
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="Images/ritr.jpeg"/>
 </head>
 <body>
+    <div class="block-color">
+      <p>|</p>
+      <p>|</p>
+    </div>
     <div id = "main">
         <!--Navigation Bar-->
         <div class="nav-wrapper">
@@ -33,14 +39,11 @@
             <h1
                 id="typewriteani" class="typewrite" data-period="2000" data-type='[ "Welcome to the Bounty Bot website."]'>
                 <span class="wrap"></span>
-                
             </h1>
         </div>
-        <div class = "image-wrapper">
-            <div class = "imagewrapper">
-                <img class = "expand-image" src = "Images/ritr.jpeg" alt = "Logo drawn by PapaFrita#8423">
-                <p>Logo drawn by PapaFrita#8423</p>
-            </div>
+        <div class = "logo-image">
+          <img class = "expand-image" src = "Images/ritr.jpeg" alt = "Logo drawn by PapaFrita#8423">
+          <figcaption class = "image1-caption"> Logo by PapaFrita#8423</figcaption>
         </div>
         <div id = "what-it-does" class = "what-it-does">
             <p id = "line-break">|</p>
@@ -51,13 +54,13 @@
             <p>GMs use commands to display available or unavailable jobs through messages sent by the bot...</p>
             <p>The bot also allows GMs to add jobs to the list and displays them in the >displayavailable</p>
             <img class = "expand-image" src = "Images/displayavailable.png" alt = "Image shows an image of the command >displayavailable">
-            <figcaption class = "image1-caption">An example of the <b>>displayavailable command</b>, which displays <b>unfinished</b> jobs in a Discord Embed</figcaption>
+            <figcaption class = "image1-caption">An example of the >displayavailable command, which displays unfinished jobs in a Discord Embed</figcaption>
             <p id = "line-break">|</p>
             <img class = "expand-image" src = "Images/displayfinished.png" alt = "Image shows an image of the command >displayavailable">
-            <figcaption class = "image1-caption">An example of the <b>>displayfinished</b> command, which displays <b>finished</b> jobs in a Discord Embed</figcaption>
+            <figcaption class = "image1-caption">An example of the >displayfinished command, which displays finished jobs in a Discord Embed</figcaption>
             <p id = "line-break">|</p>
             <img class = "expand-image" src = "Images/addjob.png" alt = "Image shows an image of the command >displayavailable">
-            <figcaption class = "image1-caption">An example of the <b>>addjob</b> command, which adds jobs to the list of available jobs</figcaption>
+            <figcaption class = "image1-caption">An example of the >addjob command, which adds jobs to the list of available jobs</figcaption>
         </div>
         <div id = "other-features" class = "other-features">
             <p id = "line-break">|</p>
@@ -67,37 +70,38 @@
         </div>
     </div>
     <div class="slideshow-container">
-
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
-          <img src="img_nature_wide.jpg" style="width:100%">
-          <div class="text">Caption Text</div>
+          <img src="Images/help.png" style="width:100%">
+          <div class="text">The >help command</div>
         </div>
         
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
-          <img src="img_snow_wide.jpg" style="width:100%">
-          <div class="text">Caption Two</div>
+          <img src="Images/jobinfo.png" style="width:100%">
+          <div class="text">>jobinfo displays all the info on a specific job, including who did it</div>
         </div>
         
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
-          <img src="img_mountains_wide.jpg" style="width:100%">
-          <div class="text">Caption Three</div>
+          <img src="Images/finishjob.png" style="width:100%">
+          <div class="text">This allows GMs to mark a job as finished and add whoever did the job</div>
         </div>
         
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
-        </div>
         <br>
-        
         <div style="text-align:center">
           <span class="dot" onclick="currentSlide(1)"></span> 
           <span class="dot" onclick="currentSlide(2)"></span> 
           <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
     </div>
 </body>
+
+
+
+
+
 <script>
     $(document).ready(function(){
       $("a").on('click', function(event) {
@@ -112,5 +116,33 @@
         } 
       });
     });
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
 </script>
 </html>
