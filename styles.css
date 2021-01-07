@@ -80,6 +80,12 @@ body {
     text-align: center;
 }
 
+/*How it works*/
+.how-it-works {
+  text-align: center;
+  font-family: 'Titillium Web';
+}
+
 /*Features*/
 .other-features {
     font-family: 'Titillium Web';
@@ -174,8 +180,6 @@ img {
   width: 100%;
   text-align: center;
 }
-
-/* The dots/bullets/indicators */
 
 /* Fading animation */
 .fade {

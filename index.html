@@ -20,15 +20,18 @@
         <!--Navigation Bar-->
         <div class="nav-wrapper">
             <div class = "left-side">
-                <div class="nav-link-wrapper" id="navindex">
+                <div class="nav-link-wrapper">
                     <a href="#main">Home</a>
                 </div>
-                <div class="nav-link-wrapper" id="navprojects">
+                <div class="nav-link-wrapper">
                     <b><a href="#what-it-does">What it does</a></b>
                 </div>
-                <div class="nav-link-wrapper" id="navabout">
-                    <a href="#other-features">Features</a>
+                <div class = "nav-link-wrapper">
+                  <a href = "#how-it-works">How it works</a>
                 </div>
+                <div class="nav-link-wrapper">
+                    <a href="#other-features">Features</a>
+                </div> 
             </div>
         </div>
         <div>
@@ -62,6 +65,19 @@
             <img class = "expand-image" src = "Images/addjob.png" alt = "Image shows an image of the command >displayavailable">
             <figcaption class = "image1-caption">An example of the >addjob command, which adds jobs to the list of available jobs</figcaption>
         </div>
+        <div id = "how-it-works" class = "how-it-works">
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <p id = "line-break">|</p>
+            <h1>How it works</h1>
+            <p>Using the >addjob command and filling out the required details prompts a question, asking to confirm if the job</p>
+            <p>is suitable. If the user types and sends "go ahead," the collected information is sorted and appended to a large</p>
+            <p>inside a JSON file. Including the details specified by the user, a randomly generated "ID" of the job, which is always</p>
+            <p>always unique (by checking through all the other job IDs and making sure it is different from the rest).</p>
+            <p>The user can then access any job through their ID, with the >jobinfo command. An earlier version of the bot was coded so that</p>
+            <p>to access any job you'd need to input the full job title, which proved to be annoying and messy in the code.</p>
+            <p>Displaying jobs just loop through the JSON file and take the pieces of info from each job, while putting it into a Discord Embed</p>
+        </div>
         <div id = "other-features" class = "other-features">
             <p id = "line-break">|</p>
             <p id = "line-break">|</p>
@@ -79,21 +95,13 @@
           <img src="Images/jobinfo.png" style="width:100%">
           <div class="text">>jobinfo displays all the info on a specific job, including who did it</div>
         </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
         
         <div class="mySlides fade">
           <img src="Images/finishjob.png" style="width:100%">
           <div class="text">This allows GMs to mark a job as finished and add whoever did the job</div>
-        </div>
-        
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-        <br>
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span> 
-          <span class="dot" onclick="currentSlide(2)"></span> 
-          <span class="dot" onclick="currentSlide(3)"></span> 
-          <span class="dot" onclick="currentSlide(4)"></span> 
         </div>
     </div>
 </body>
