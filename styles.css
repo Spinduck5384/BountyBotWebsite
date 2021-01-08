@@ -74,6 +74,36 @@ body {
   margin: auto;
 }
 
+/*Credit*/
+.credit {
+  text-align: center;
+  font-family: 'Titillium Web';
+}
+
+.git-link {
+  color: rgb(100,100,100);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.git-link:hover {
+  border-bottom: 1px solid rgb(9, 247, 235);
+  color: rgb(9, 247, 235);
+}
+
+.portfolio {
+  color: rgb(100,100,100);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.portfolio:hover {
+  color: rgb(9, 247, 235);
+  border-bottom: 1px solid rgb(9, 247, 235);
+}
+
 /*What it does*/
 .what-it-does {
     font-family: 'Titillium Web';
